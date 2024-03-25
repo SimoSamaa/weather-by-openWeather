@@ -1,0 +1,29 @@
+{
+  "name": "weather-app",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "uuid": "^9.0.1",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0",
+    "vuex": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/uuid": "^9.0.8",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "autoprefixer": "^10.4.18",
+    "eslint": "^8.49.0",
+    "eslint-plugin-vue": "^9.17.0",
+    "postcss": "^8.4.37",
+    "tailwindcss": "^3.4.1",
+    "vite": "^5.1.6",
+    "vite-plugin-vue-devtools": "^7.0.18"
+  }
+}
