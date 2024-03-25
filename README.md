@@ -1,5 +1,9 @@
 # Weather-App
 
+## Screenshots
+**large screen**
+<img src="https://i.ibb.co/xGKzQcz/Screenshot-2024-03-24-204850.png" alt="App Screenshot" width="400" height="auto">
+
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
