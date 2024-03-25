@@ -35,7 +35,7 @@ This weather app provides users with real-time weather information for various c
 
 ## Configuration
 - **Firebase Configuration:** Configure Firebase credentials in `src/main.js`.
-- **OpenWeather API:** Set your API key in `src/main.js.
+- **OpenWeather API:** Set your API key in `src/main.js`.
 
 ## Recommended IDE Setup
 
