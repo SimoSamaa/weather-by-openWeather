@@ -2,8 +2,11 @@
 
 ## Screenshots
 **large screen**
-<img src="https://i.ibb.co/xGKzQcz/Screenshot-2024-03-24-204850.png" alt="App Screenshot" width="400" height="auto">
-
+<div style='display=flex'>
+  <img src="https://i.ibb.co/xGKzQcz/Screenshot-2024-03-24-204850.png" alt="App Screenshot" width="400" height="auto">
+  <img src="https://i.ibb.co/wrsgDFP/Screenshot-2024-03-24-204942.png" alt="App Screenshot" width="400" height="auto">
+  <img src="https://i.ibb.co/S39pgnj/Screenshot-2024-03-24-205839.png" alt="App Screenshot" width="400" height="auto">
+</div>
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
