@@ -4,6 +4,7 @@
 This weather app provides users with real-time weather information for various cities. Users can add cities to their list and view detailed weather information for each city. The app utilizes Vue.js for frontend development, Vuex for state management, Vue Router for navigation, and integrates with the OpenWeather API for weather data. Firebase is used for data storage, and Tailwind CSS is employed for UI styling.
 
 ## Features
+- **Current Location:** Users can get their current location using GPS to fetch weather information.
 - **City List Page:** Displays a list of cities added by the user.
 - **Weather Details Page:** Provides detailed weather information for a selected city.
 - **Add City:** Users can add new cities to their list.
