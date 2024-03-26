@@ -60,7 +60,7 @@
         <span>{{ new Date(time.dt * 1000).toLocaleString('en-us', { hour: 'numeric' }) }}</span>
         <img
           class="size-8"
-          :src="getImageUrl(`../assets/conditions/${time.weather[ 0 ].icon}.svg`)"
+          :src="setUrl('conditions', time.weather[ 0 ].icon, 'svg')"
           alt="weather-icon"
         >
         <span>{{ parseInt(time.temp) }}&deg;</span>
@@ -75,7 +75,7 @@
         <div>{{ new Date(daily.dt * 1000).toLocaleString('en-us', { weekday: 'long' }) }}</div>
         <img
           class="size-8 mx-auto"
-          :src="getImageUrl(`../assets/conditions/${daily.weather[ 0 ].icon}.svg`)"
+          :src="setUrl('conditions', daily.weather[ 0 ].icon, 'svg')"
           alt="weather-icon"
         >
         <div class="flex gap-2 justify-end">
@@ -152,6 +152,11 @@ const weatherDaily = ref(null);
 const goBack = () => router.replace('/');
 
 const getImageUrl = (url) => new URL(url, import.meta.url).href;
+const setUrl = computed(() => {
+  return (folder, fileName, fileType) => {
+    return new URL(`../assets/${ folder }/${ fileName }.${ fileType }`, import.meta.url).href;
+  };
+});
 
 const fetchWeatherData = async () => {
   const API_KEY = 'a32765bf82d273585a943c4af897b9f7';
@@ -164,5 +169,5 @@ const fetchWeatherData = async () => {
   weatherDaily.value = resData.daily.slice(1, 8);
 };
 
-// fetchWeatherData();
+fetchWeatherData();
 </script>

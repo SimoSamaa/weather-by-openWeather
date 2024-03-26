@@ -21,14 +21,14 @@
           loop
           playsinline
           disablepictureinpicture
-          :src="getImageUrl(`../assets/videos/${city.currentWeather.weather[ 0 ].icon}.mp4`)"
+          :src="setUrl('videos', city.currentWeather.weather[ 0 ].icon, 'mp4')"
         ></video>
         <div class="font-semibold text-xl isolate">
           <div>{{ city.city }}</div>
           <div class="flex gap-2 items-center absolute bottom-5 right-5">
             <div>{{ parseInt(city.currentWeather.main.temp) }}&deg;</div>
             <img
-              :src="getImageUrl(`../assets/conditions/${city.currentWeather.weather[ 0 ].icon}.svg`)"
+              :src="setUrl('conditions', city.currentWeather.weather[ 0 ].icon, 'svg')"
               alt="status-icon"
               class="size-10 max-[600px]:size-8"
             >
@@ -68,7 +68,13 @@ const router = useRouter();
 const cities = computed(() => store.getters.cities);
 const checkCities = computed(() => store.getters.checkCities);
 
-const getImageUrl = (url) => new URL(url, import.meta.url).href;
+// const setUrl = (url) => new URL(url, import.meta.url).href;
+
+const setUrl = computed(() => {
+  return (folder, fileName, fileType) => {
+    return new URL(`../assets/${ folder }/${ fileName }.${ fileType }`, import.meta.url).href;
+  };
+});
 
 const deleteWeatherCity = async (id) => {
   await store.dispatch('deleteCity', id);
