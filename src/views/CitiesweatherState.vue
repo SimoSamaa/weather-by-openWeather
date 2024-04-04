@@ -15,7 +15,7 @@
         @click="weatherDetails(city.city)"
       >
         <video
-          class="absolute inset-0 size-full"
+          class="absolute inset-0 size-full object-fill"
           autoplay
           muted
           loop
@@ -67,8 +67,6 @@ const router = useRouter();
 
 const cities = computed(() => store.getters.cities);
 const checkCities = computed(() => store.getters.checkCities);
-
-// const setUrl = (url) => new URL(url, import.meta.url).href;
 
 const setUrl = computed(() => {
   return (folder, fileName, fileType) => {

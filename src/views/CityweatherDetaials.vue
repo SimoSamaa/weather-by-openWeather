@@ -151,7 +151,6 @@ const weatherDaily = ref(null);
 
 const goBack = () => router.replace('/');
 
-const getImageUrl = (url) => new URL(url, import.meta.url).href;
 const setUrl = computed(() => {
   return (folder, fileName, fileType) => {
     return new URL(`../assets/${ folder }/${ fileName }.${ fileType }`, import.meta.url).href;
